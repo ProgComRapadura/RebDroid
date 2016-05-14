@@ -4,7 +4,7 @@
 
 # Files for the Dalvik VM
 *.dex
-
+*.test
 # Java class files
 *.class
 
