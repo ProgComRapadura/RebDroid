@@ -1,0 +1,17 @@
+<resources>
+
+  <dimen name="table_default_text_size">16sp</dimen>
+  <dimen name="table_default_title_size">14sp</dimen>
+
+  <dimen name="table_left_title_width">70dp</dimen>
+  <dimen name="table_top_title_height">36dp</dimen>
+  <dimen name="table_default_margin_top">12dp</dimen>
+  <dimen name="table_top_title_place">48dp</dimen>
+
+  <dimen name="table_item_height">30dp</dimen>
+  <dimen name="table_item_width">160dp</dimen>
+  <dimen name="table_item_margin">2dp</dimen>
+  <dimen name="table_header_circle_radius">4dp</dimen>
+  <dimen name="table_header_indicator_width">8dp</dimen>
+
+</resources>
