@@ -5,7 +5,7 @@ android:
   - tools
   - extra-google-google_play_services
   - extra-google-m2repository
-  - build-tools-23.0.3
+  - build-tools-24.0.0
   - android-23
   - extra-android-m2repository
   - addon-google_apis-google-+
