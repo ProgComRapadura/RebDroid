@@ -37,12 +37,6 @@ public void callDBBrowser() {
 
 ```
 
-### Development
-
-[RodrigoB] - Project creator.
-
-Want to contribute? Great!
-
 ### Todos
 
  * [x] <s>Disponibly to use in Gradle</s>
