@@ -15,7 +15,7 @@ Realm.io database browser
 
 Add it in your root build.gradle at the end of repositories:
 
-```	
+```groovy	
 allprojects {
 		repositories {
 			...
@@ -24,7 +24,7 @@ allprojects {
 	}
 ```
 Step 2. Add the dependency
-```
+```groovy
 	dependencies {
 	    compile 'com.github.Snakeice:RebDroid:v1.0'
 	}
@@ -32,7 +32,7 @@ Step 2. Add the dependency
 ### How to use
 
 Only call
-```
+```java
 public void callDBBrowser() {
    DBViewer.start(context, realm.getRealmConfig());
 }
