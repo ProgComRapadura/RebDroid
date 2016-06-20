@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.snakeice.realmdroid.scrolltable.IHorizontalScrollView
+        android:id="@+id/scroll_header_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/table_top_title_height"
+        android:layout_marginLeft="@dimen/table_left_title_width"
+        tools:ignore="RtlHardcoded">
+
+        <com.github.snakeice.realmdroid.scrolltable.TopTitleView
+            android:id="@+id/header_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </com.github.snakeice.realmdroid.scrolltable.IHorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <com.github.snakeice.realmdroid.scrolltable.VerticalScrollView
+            android:id="@+id/scroll_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.snakeice.realmdroid.scrolltable.LeftTitleView
+                    android:id="@+id/header_vertical"
+                    android:layout_width="@dimen/table_left_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"/>
+
+                <com.github.snakeice.realmdroid.scrolltable.IHorizontalScrollView
+                    android:id="@+id/scroll_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.github.snakeice.realmdroid.scrolltable.CustomTableView
+                        android:layout_marginTop="@dimen/table_default_margin_top"
+                        android:id="@+id/content_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </com.github.snakeice.realmdroid.scrolltable.IHorizontalScrollView>
+            </LinearLayout>
+
+        </com.github.snakeice.realmdroid.scrolltable.VerticalScrollView>
+    </LinearLayout>
+
+</LinearLayout>
