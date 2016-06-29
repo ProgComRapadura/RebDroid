@@ -8,7 +8,7 @@ Realm.io database browser
 [![Release](https://jitpack.io/v/Snakeice/RebDroid.svg)](https://jitpack.io/#Snakeice/RebDroid)
 [![Build Status](https://travis-ci.org/Snakeice/RebDroid.svg?branch=master)](https://travis-ci.org/Snakeice/RebDroid)<br>
 [![Language](http://img.shields.io/badge/language-java-orange.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [![License](http://img.shields.io/badge/license-apache2.0-lightgrey.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RebDroid-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3804)
 ### Installation
 
 Add it in your root build.gradle at the end of repositories:
