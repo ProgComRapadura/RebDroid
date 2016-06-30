@@ -1,5 +1,6 @@
 package com.github.snakeice.realmdroid.scrolltable;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -31,6 +32,7 @@ public class ScrollTableView extends LinearLayout implements CustomTableView.OnP
         this(context, attrs, 0);
     }
 
+    @SuppressLint("NewApi")
     public ScrollTableView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);

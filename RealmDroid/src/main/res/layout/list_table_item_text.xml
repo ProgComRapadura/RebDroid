@@ -8,4 +8,5 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:padding="8dp"
-    tools:text="@string/LOADING" />
+    tools:text="@string/LOADING"
+    tools:ignore="NewApi" />
