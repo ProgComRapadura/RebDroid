@@ -15,9 +15,7 @@ import com.github.snakeice.realmdroid.R;
 import java.util.ArrayList;
 
 
-
 public class CustomTableView extends View {
-    private static final String TAG = "CustomTableView";
 
     private Paint mPaintTextNormal;
     private Paint mPaintItemBg;
@@ -27,7 +25,6 @@ public class CustomTableView extends View {
     private int mTextSelectColor;
     private int mItemBgNormalColor;
     private int mItemBgSelectColor;
-    private float mTextNormal;
     private ArrayList<Float> mTamanhos;
     private int mItemHeight;
     private int mItemWidth;
@@ -50,12 +47,11 @@ public class CustomTableView extends View {
 
     public CustomTableView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        init(context, attrs, defStyleAttr);
+        init();
         setBackgroundColor(ContextCompat.getColor(getContext(), R.color.table_divider_color));
     }
 
-    private void init(Context context, AttributeSet attrs, int defStyleAttr) {
+    private void init() {
         initData();
         initPaint();
         datas = new ArrayList<>();
@@ -74,7 +70,7 @@ public class CustomTableView extends View {
         mTextSelectColor = ContextCompat.getColor(getContext(), R.color.table_text_select_color);
         mItemBgNormalColor = ContextCompat.getColor(getContext(), R.color.table_item_bg_normal_color);
         mItemBgSelectColor = ContextCompat.getColor(getContext(), R.color.table_item_bg_select_color);
-        mTextNormal = getResources().getDimension(R.dimen.table_default_text_size);
+        float mTextNormal = getResources().getDimension(R.dimen.table_default_text_size);
 
         mPaintTextNormal = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintTextNormal.setColor(mTextNormalColor);
@@ -190,6 +186,8 @@ public class CustomTableView extends View {
                 if (mPositionChangeListener != null) {
                     mPositionChangeListener.onPositionClick(position);
                 }
+                break;
+            default:
                 break;
         }
         return true;

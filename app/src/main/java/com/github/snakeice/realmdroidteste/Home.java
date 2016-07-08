@@ -1,13 +1,13 @@
-package com.github.snakeice.realmdroidTeste;
+package com.github.snakeice.realmdroidteste;
 
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.github.snakeice.realmdroid.DBViewer;
-import com.github.snakeice.realmdroidTeste.modelsTest.DB;
-import com.github.snakeice.realmdroidTeste.modelsTest.Empresa;
-import com.github.snakeice.realmdroidTeste.modelsTest.Pessoa;
+import com.github.snakeice.realmdroidteste.modeltest.DB;
+import com.github.snakeice.realmdroidteste.modeltest.Empresa;
+import com.github.snakeice.realmdroidteste.modeltest.Pessoa;
 
 import java.util.Random;
 
@@ -17,7 +17,7 @@ import io.realm.Realm;
 
 public class Home extends AppCompatActivity {
     //    private DBMetadataCollector collector;
-    Realm realm;
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,6 +11,7 @@ public class Column {
     private String name;
     private RealmFieldType type;
     private Boolean primaryKey;
+    private Boolean required;
 
     public Boolean getRequired() {
         return required;
@@ -27,8 +28,6 @@ public class Column {
     public void setPrimaryKey(Boolean primaryKey) {
         this.primaryKey = primaryKey;
     }
-
-    private Boolean required;
 
     public String getName() {
         return name;

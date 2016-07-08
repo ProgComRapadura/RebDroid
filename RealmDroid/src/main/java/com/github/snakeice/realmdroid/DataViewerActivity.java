@@ -13,8 +13,8 @@ import io.realm.DynamicRealmObject;
 import io.realm.RealmList;
 
 public class DataViewerActivity extends Activity implements ScrollTableView.ScrollTableListener {
-    DBMetadataCollector mDBController;
-    ViewAdapter va;
+    private DBMetadataCollector mDBController;
+    private ViewAdapter va;
 
     public  void alertaWithButton(String titulo, String msg,final Activity activity,
                                         SweetAlertDialog.OnSweetClickListener onClickListener) {
@@ -64,7 +64,7 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
                             ((DynamicRealmObject) ((RealmList) value).first()).getType() + ">",
                     DataViewerActivity.this);
         } else {
-            AlertEdit.Buider(this)
+            AlertEdit.buider(this)
                     .setTitle(mDBController.getActiveTable().getColumns().get(position.x).getName())
                     .setContent(value.toString())
                     .setOnClickListener(new AlertEdit.OnClickListener() {

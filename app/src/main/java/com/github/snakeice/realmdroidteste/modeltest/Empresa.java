@@ -1,9 +1,10 @@
-package com.github.snakeice.realmdroidTeste.modelsTest;
+package com.github.snakeice.realmdroidteste.modeltest;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
+ * Test
  * Created by Rodrigo on 12/05/2016.
  */
 public class Empresa extends RealmObject {
