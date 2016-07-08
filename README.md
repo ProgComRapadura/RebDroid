@@ -3,6 +3,8 @@
 
 Realm.io database browser
 
+> Join in chat > [Slack](https://progcomrapadura.slack.com/)
+
 <a href="http://www.methodscount.com/?lib=com.github.Snakeice%3ARebDroid%3A%2B"><img src="https://img.shields.io/badge/Methods and size-core: 312 | deps: 24381 | 85 KB-e91e63.svg"/></a><br>
 [![Platform](http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat)](http://developer.android.com/index.html)
 [![Release](https://jitpack.io/v/Snakeice/RebDroid.svg)](https://jitpack.io/#Snakeice/RebDroid)
