@@ -30,6 +30,8 @@ public class DBMetadataCollector {
 
     public DBMetadataCollector() {
         mTables = new ArrayList<>();
+        if (mConfiguration == null)
+            throw new NullPointerException("RealmConfiguration is null");
         this.mRealm = DynamicRealm.getInstance(mConfiguration);
         execute();
     }

@@ -16,8 +16,8 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
     private DBMetadataCollector mDBController;
     private ViewAdapter va;
 
-    public  void alertaWithButton(String titulo, String msg,final Activity activity,
-                                        SweetAlertDialog.OnSweetClickListener onClickListener) {
+    public void alertaWithButton(String titulo, String msg, final Activity activity,
+                                 SweetAlertDialog.OnSweetClickListener onClickListener) {
         new SweetAlertDialog(activity, SweetAlertDialog.NORMAL_TYPE)
                 .setTitleText(titulo)
                 .setContentText(msg)
@@ -25,7 +25,8 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
                 .setConfirmText("OK")
                 .show();
     }
-    public  void alerta(String titulo, String msg, Activity activity) {
+
+    public void alerta(String titulo, String msg, Activity activity) {
         new SweetAlertDialog(activity)
                 .setTitleText(titulo)
                 .setContentText(msg)
@@ -58,7 +59,6 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
     @Override
     public void onItemClickListener(final Position position) {
         final Object value = mDBController.getValue(position);
-        mDBController.getActiveTable().getColumns().get(4).getType();
         if (value.getClass().equals(RealmList.class)) {
             alerta("Valor", "RealmList<" +
                             ((DynamicRealmObject) ((RealmList) value).first()).getType() + ">",

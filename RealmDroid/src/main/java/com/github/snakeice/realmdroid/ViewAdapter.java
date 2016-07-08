@@ -1,6 +1,7 @@
 package com.github.snakeice.realmdroid;
 
 
+import android.util.Log;
 
 import com.github.snakeice.realmdroid.models.Column;
 import com.github.snakeice.realmdroid.models.TableStructure;
@@ -34,7 +35,7 @@ public class ViewAdapter {
         generateData();
     }
 
-    void generateData() {
+    public void generateData() {
         titles = createTitles();
         leftTitle = createLeftTitle();
         content = createContent();
@@ -69,11 +70,16 @@ public class ViewAdapter {
             ArrayList<String> strings = new ArrayList<>();
             DynamicRealmObject object = realm.where(mTable.getName()).findAll().get(i);
             for (int j = 0; j < column; j++) {
-                String cel;
-                if (mTable.getColumns().get(j).getType() == RealmFieldType.LIST) {
-                    cel = "RealmList<" + object.getList(mTable.getColumns().get(j).getName()).first().getType() + '>';
-                } else {
-                    cel = object.get(mTable.getColumns().get(j).getName()).toString();
+                String cel = "";
+                try {
+                    if (object.get(mTable.getColumns().get(j).getName()) != null)
+                        if (mTable.getColumns().get(j).getType() == RealmFieldType.LIST) {
+                            cel = "RealmList<" + object.getList(mTable.getColumns().get(j).getName()).first().getType() + '>';
+                        } else {
+                            cel = object.get(mTable.getColumns().get(j).getName()).toString();
+                        }
+                } catch (NullPointerException e) {
+                    Log.e("Except > ", "row size: " + row + " column size: " + column + "   " + i + "/" + j);
                 }
                 strings.add(cel);
             }
