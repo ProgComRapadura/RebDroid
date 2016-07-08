@@ -12,10 +12,6 @@ import io.realm.RealmConfiguration;
 public class DBViewer {
     public static String TABLE_NUM = "TaBlENuM123";
 
-
-    public DBViewer() {
-    }
-
     public static void start(Context context, RealmConfiguration configuration) {
         DBMetadataCollector.mConfiguration = configuration;
         Intent intent = new Intent(context, TablesView.class);

@@ -39,11 +39,10 @@ public class TopTitleView extends View {
 
     public TopTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        init(attrs, defStyleAttr);
+        init();
     }
 
-    private void init(AttributeSet attrs, int defStyleAttr) {
+    private void init() {
         initData();
         initPaint();
         titles = new ArrayList<>();

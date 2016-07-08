@@ -18,10 +18,10 @@ import io.realm.RealmResults;
  * Created by Rodrigo on 12/05/2016.
  */
 public class ViewAdapter {
-    ArrayList<String> titles;
-    ArrayList<String> leftTitle;
-    ArrayList<ArrayList<String>> content;
-    RealmResults<DynamicRealmObject> mItens;
+    private ArrayList<String> titles;
+    private ArrayList<String> leftTitle;
+    private ArrayList<ArrayList<String>> content;
+    private RealmResults<DynamicRealmObject> mItens;
     private TableStructure mTable;
     private DynamicRealm realm;
     private ScrollTableView mView;

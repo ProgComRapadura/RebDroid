@@ -13,8 +13,6 @@ import java.util.ArrayList;
 
 public class ScrollTableView extends LinearLayout implements CustomTableView.OnPositionClickListener {
 
-    private IHorizontalScrollView scrollHeaderHorizontal;
-    private IHorizontalScrollView scrollHorizontal;
     private LeftTitleView headerVertical;
     private TopTitleView headerHorizontal;
     private CustomTableView contentView;
@@ -57,8 +55,8 @@ public class ScrollTableView extends LinearLayout implements CustomTableView.OnP
     }
 
     private void setUpView() {
-        scrollHeaderHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_header_horizontal);
-        scrollHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_horizontal);
+        IHorizontalScrollView scrollHeaderHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_header_horizontal);
+        IHorizontalScrollView scrollHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_horizontal);
         headerVertical = (LeftTitleView) findViewById(R.id.header_vertical);
         headerHorizontal = (TopTitleView) findViewById(R.id.header_horizontal);
         contentView = (CustomTableView) findViewById(R.id.content_view);

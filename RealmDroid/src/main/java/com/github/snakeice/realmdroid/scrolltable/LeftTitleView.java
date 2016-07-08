@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class LeftTitleView extends View {
 
-    ArrayList<String> titles;
+    private ArrayList<String> titles;
     private Paint mPaintTextNormal;
     private Paint mPaintItemIndicatorCircle;
     private Paint mPaintItemIndicatorLine;
@@ -40,11 +40,10 @@ public class LeftTitleView extends View {
 
     public LeftTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        init(context, attrs, defStyleAttr);
+        init();
     }
 
-    private void init(Context context, AttributeSet attrs, int defStyleAttr) {
+    private void init() {
         initData();
         initPaint();
         titles = new ArrayList<>();

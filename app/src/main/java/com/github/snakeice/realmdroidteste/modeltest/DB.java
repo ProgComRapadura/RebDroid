@@ -1,4 +1,4 @@
-package com.github.snakeice.realmdroidTeste.modelsTest;
+package com.github.snakeice.realmdroidteste.modeltest;
 
 import android.content.Context;
 
@@ -6,10 +6,11 @@ import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
 /**
+ * Test
  * Created by Rodrigo on 12/05/2016.
  */
 public class DB {
-public static RealmConfiguration getConfiguration(Context context){
+    public static RealmConfiguration getConfiguration(Context context) {
         return new RealmConfiguration.Builder(context)
                 .name("realm.realm")
 //                .encryptionKey()
@@ -19,7 +20,7 @@ public static RealmConfiguration getConfiguration(Context context){
                 .build();
     }
 
-    public static RealmConfiguration getConfigurationTest(Context context){
+    public static RealmConfiguration getConfigurationTest(Context context) {
         return new RealmConfiguration.Builder(context)
                 .name("realm.realm")
 //                .encryptionKey()
@@ -28,7 +29,7 @@ public static RealmConfiguration getConfiguration(Context context){
     }
 
 
-    public static Realm getRealm(Context context){
+    public static Realm getRealm(Context context) {
         return Realm.getInstance(getConfiguration(context));
     }
 }

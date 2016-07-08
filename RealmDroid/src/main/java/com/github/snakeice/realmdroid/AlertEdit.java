@@ -28,7 +28,7 @@ public class AlertEdit {
         mBuilder = new AlertDialog.Builder(context);
     }
 
-    public static AlertEdit Buider(Context context) {
+    public static AlertEdit buider(Context context) {
         mAlertEdit = new AlertEdit(context);
         return mAlertEdit;
     }
