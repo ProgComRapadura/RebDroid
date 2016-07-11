@@ -5,10 +5,10 @@ Realm.io database browser
 
 > Join in chat > [Slack](https://progcomrapadura.slack.com/)
 
-<a href="http://www.methodscount.com/?lib=com.github.Snakeice%3ARebDroid%3A%2B"><img src="https://img.shields.io/badge/Methods and size-core: 312 | deps: 24381 | 85 KB-e91e63.svg"/></a><br>
+<a href="http://www.methodscount.com/?lib=com.github.ProgComRapadura%3ARebDroid%3A%2B"><img src="https://img.shields.io/badge/Methods and size-core: 312 | deps: 24381 | 85 KB-e91e63.svg"/></a><br>
 [![Platform](http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat)](http://developer.android.com/index.html)
-[![Release](https://jitpack.io/v/Snakeice/RebDroid.svg)](https://jitpack.io/#Snakeice/RebDroid)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2b2f1f19d26c4c3bb0ee25384db602e4)](https://www.codacy.com/app/ProgComRapadura/RebDroid?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Snakeice/RebDroid&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/Snakeice/RebDroid.svg?branch=master)](https://travis-ci.org/Snakeice/RebDroid)<br>
+[![Release](https://jitpack.io/v/ProgComRapadura/RebDroid.svg)](https://jitpack.io/#ProgComRapadura/RebDroid)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2b2f1f19d26c4c3bb0ee25384db602e4)](https://www.codacy.com/app/ProgComRapadura/RebDroid?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ProgComRapadura/RebDroid&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/ProgComRapadura/RebDroid.svg?branch=master)](https://travis-ci.org/ProgComRapadura/RebDroid)<br>
 [![Language](http://img.shields.io/badge/language-java-orange.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [![License](http://img.shields.io/badge/license-apache2.0-lightgrey.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RebDroid-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3804)
 ### Installation
