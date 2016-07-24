@@ -5,6 +5,7 @@ import android.util.Log;
 import com.github.snakeice.realmdroid.models.Column;
 import com.github.snakeice.realmdroid.models.TableStructure;
 import com.github.snakeice.realmdroid.scrolltable.Position;
+import com.github.snakeice.realmdroid.utils.L;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -84,7 +85,7 @@ public class DBMetadataCollector {
                 this.mTables.add(table);
             }
             String s = new Gson().toJson(mTables);
-            Log.i(this.toString(), "execute: " + s);
+            L.i("execute: " + s);
         }
         return mTables;
     }
