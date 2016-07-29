@@ -6,6 +6,7 @@ import android.util.Log;
 import com.github.snakeice.realmdroid.models.Column;
 import com.github.snakeice.realmdroid.models.TableStructure;
 import com.github.snakeice.realmdroid.scrolltable.ScrollTableView;
+import com.github.snakeice.realmdroid.utils.L;
 
 import java.util.ArrayList;
 
@@ -79,7 +80,7 @@ public class ViewAdapter {
                             cel = object.get(mTable.getColumns().get(j).getName()).toString();
                         }
                 } catch (NullPointerException e) {
-                    Log.e("Except > ", "row size: " + row + " column size: " + column + "   " + i + "/" + j);
+                    L.e("Except > row size: " + row + " column size: " + column + "   " + i + "/" + j);
                 }
                 strings.add(cel);
             }

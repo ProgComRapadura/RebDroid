@@ -16,19 +16,19 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
     private DBMetadataCollector mDBController;
     private ViewAdapter va;
 
-    public void alertaWithButton(String titulo, String msg, final Activity activity,
+    public void alertWithButton(String title, String msg, final Activity activity,
                                  SweetAlertDialog.OnSweetClickListener onClickListener) {
         new SweetAlertDialog(activity, SweetAlertDialog.NORMAL_TYPE)
-                .setTitleText(titulo)
+                .setTitleText(title)
                 .setContentText(msg)
                 .setConfirmClickListener(onClickListener)
                 .setConfirmText("OK")
                 .show();
     }
 
-    public void alerta(String titulo, String msg, Activity activity) {
+    public void alert(String title, String msg, Activity activity) {
         new SweetAlertDialog(activity)
-                .setTitleText(titulo)
+                .setTitleText(title)
                 .setContentText(msg)
                 .show();
     }
@@ -46,7 +46,7 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
         if (va.isNotEmpty()) {
             va.createView();
         } else {
-            alertaWithButton("Aviso", "Tabela vazia!", this,
+            alertWithButton("Notice", "Empty table!", this,
                     new SweetAlertDialog.OnSweetClickListener() {
                         @Override
                         public void onClick(SweetAlertDialog sweetAlertDialog) {
@@ -60,7 +60,7 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
     public void onItemClickListener(final Position position) {
         final Object value = mDBController.getValue(position);
         if (value.getClass().equals(RealmList.class)) {
-            alerta("Valor", "RealmList<" +
+            alert("Value", "RealmList<" +
                             ((DynamicRealmObject) ((RealmList) value).first()).getType() + ">",
                     DataViewerActivity.this);
         } else {
