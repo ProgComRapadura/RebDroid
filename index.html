@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Rebdroid by ProgComRapadura</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Rebdroid</h1>
-      <h2 class="project-tagline">Browser and editor for Realm DB</h2>
-      <a href="https://github.com/ProgComRapadura/RebDroid" class="btn">View on GitHub</a>
-      <a href="https://github.com/ProgComRapadura/RebDroid/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/ProgComRapadura/RebDroid/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h1>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Rebdroid by ProgComRapadura</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Rebdroid</h1>
+        <h2>Browser and editor for Realm DB</h2>
+        <a href="https://github.com/ProgComRapadura/RebDroid" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="rebdroid" class="anchor" href="#rebdroid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RebDroid</h1>
 
 <p>Realm.io database browser</p>
@@ -28,10 +37,10 @@
 <p>Join in chat &gt; <a href="https://progcomrapadura.slack.com/">Slack</a></p>
 </blockquote>
 
-<p><a href="http://www.methodscount.com/?lib=com.github.Snakeice%3ARebDroid%3A%2B"><img src="https://img.shields.io/badge/Methods%20and%20size-core:%20312%20%7C%20deps:%2024381%20%7C%2085%20KB-e91e63.svg"></a><br>
+<p><a href="http://www.methodscount.com/?lib=com.github.ProgComRapadura%3ARebDroid%3A%2B"><img src="https://img.shields.io/badge/Methods%20and%20size-core:%20312%20%7C%20deps:%2024381%20%7C%2085%20KB-e91e63.svg"></a><br>
 <a href="http://developer.android.com/index.html"><img src="http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat" alt="Platform"></a>
-<a href="https://jitpack.io/#Snakeice/RebDroid"><img src="https://jitpack.io/v/Snakeice/RebDroid.svg" alt="Release"></a>
-<a href="https://travis-ci.org/Snakeice/RebDroid"><img src="https://travis-ci.org/Snakeice/RebDroid.svg?branch=master" alt="Build Status"></a><br>
+<a href="https://jitpack.io/#ProgComRapadura/RebDroid"><img src="https://jitpack.io/v/ProgComRapadura/RebDroid.svg" alt="Release"></a><a href="https://www.codacy.com/app/ProgComRapadura/RebDroid?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=ProgComRapadura/RebDroid&amp;amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/3c606e0053574faebc617392aa1d5a3c" alt="Codacy Badge"></a>
+<a href="https://travis-ci.org/ProgComRapadura/RebDroid"><img src="https://travis-ci.org/ProgComRapadura/RebDroid.svg?branch=master" alt="Build Status"></a><br>
 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"><img src="http://img.shields.io/badge/language-java-orange.svg?style=flat" alt="Language"></a> <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="http://img.shields.io/badge/license-apache2.0-lightgrey.svg?style=flat" alt="License"></a>
 <a href="http://android-arsenal.com/details/1/3804"><img src="https://img.shields.io/badge/Android%20Arsenal-RebDroid-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
 
@@ -50,7 +59,7 @@
 <p>Step 2. Add the dependency</p>
 
 <div class="highlight highlight-source-groovy"><pre>    dependencies {
-        compile <span class="pl-s"><span class="pl-pds">'</span>com.github.Snakeice:RebDroid:v1.2<span class="pl-pds">'</span></span>
+        compile <span class="pl-s"><span class="pl-pds">'</span>com.github.ProgComRapadura:RebDroid:1.4<span class="pl-pds">'</span></span>
     }</pre></div>
 
 <h3>
@@ -83,14 +92,24 @@
 <p>Apache 2.0</p>
 
 <p><strong>Free Software, Hell Yeah!</strong></p>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/ProgComRapadura/RebDroid">Rebdroid</a> is maintained by <a href="https://github.com/ProgComRapadura">ProgComRapadura</a>.</span>
+        <aside id="sidebar">
+          <a href="https://github.com/ProgComRapadura/RebDroid/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ProgComRapadura/RebDroid/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/ProgComRapadura/RebDroid"></a> is maintained by <a href="https://github.com/ProgComRapadura">ProgComRapadura</a>.</p>
 
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
   
   </body>
