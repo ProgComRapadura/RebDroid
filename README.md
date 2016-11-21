@@ -44,10 +44,7 @@ public void callDBBrowser() {
  * [x] <s>Disponibly to use in Gradle</s>
  * [ ] Write Tests
  * [ ] Add Code Comments
- * [ ] Add Night Mode
  * [ ] Add Typed edit
- * [ ] Add file browser
- * [ ] Make independent app
 
 License
 ----
