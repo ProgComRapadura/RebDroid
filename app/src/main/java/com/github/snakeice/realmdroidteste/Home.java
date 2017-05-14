@@ -1,19 +1,19 @@
 package com.github.snakeice.realmdroidteste;
 
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.github.snakeice.realmdroid.DBViewer;
-import com.github.snakeice.realmdroidteste.modeltest.DB;
-import com.github.snakeice.realmdroidteste.modeltest.Empresa;
 import com.github.snakeice.realmdroidteste.modeltest.Pessoa;
+import com.github.snakeice.realmdroidteste.modeltest.SchemaTeste;
 
 import java.util.Random;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class Home extends AppCompatActivity {
     //    private DBMetadataCollector collector;
@@ -23,10 +23,17 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        realm = DB.getRealm(this);
+        Realm.init(this);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
+                .name("realm.realm")
+                .schemaVersion(1)
+                .deleteRealmIfMigrationNeeded()
+                .modules(new SchemaTeste())
+                .build();
 
-//        collector = new DBMetadataCollector(realm);
-//        collector.execute();
+        Realm.setDefaultConfiguration(realmConfiguration);
+
+        realm = Realm.getDefaultInstance();
         ButterKnife.bind(this);
     }
 
@@ -39,24 +46,11 @@ public class Home extends AppCompatActivity {
     @OnClick(R.id.btn_add)
     public void add100Data() {
         for (int i = 0; i < 100; i++) {
-            Empresa e = new Empresa();
-            e.setCnpj("12345678909876543");
-            e.setId(new Random().nextLong());
-            e.setNome("Jacinto");
-            e.setNome2("Jacinto");
-            e.setNome3("Jacinto");
-            e.setNome4("Jacinto");
-            e.setNome5("Jacinto");
-            e.setNome6("Jacinto");
-            e.setNome7("Jacinto");
-            e.setNome8("Jacinto");
-            e.setNome9("Jacinto");
             Pessoa p = new Pessoa();
             p.setNome("Teste");
             p.setId(new Random().nextLong());
             p.setEndereco("Narnia");
             realm.beginTransaction();
-            realm.copyToRealmOrUpdate(e);
             realm.copyToRealmOrUpdate(p);
             realm.commitTransaction();
         }
