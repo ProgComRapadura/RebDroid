@@ -26,7 +26,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    compile 'com.github.ProgComRapadura:RebDroid:1.4'
+	    compile 'com.github.ProgComRapadura:RebDroid:2.0'
 	}
 ```
 ### How to use
@@ -41,11 +41,10 @@ public void callDBBrowser() {
 
 ### Todos
 
- * [x] <s>Disponibly to use in Gradle</s>
  * [ ] Write Tests
  * [ ] Add Code Comments
  * [ ] Add Night Mode
- * [ ] Add Typed edit
+ * [ ] Add Typed edit(Working)
  * [ ] Add file browser
  * [ ] Make independent app
 
