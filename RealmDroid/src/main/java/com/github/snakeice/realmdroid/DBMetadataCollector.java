@@ -105,9 +105,18 @@ public class DBMetadataCollector {
             public void execute(DynamicRealm realm) {
                 DynamicRealmObject dynamicRealmObject = realm.where(mActiveTable.getName())
                         .findAll().get(position.y);
-                dynamicRealmObject.set(mActiveTable.getColumns().get(position.x).getName(),s);
+                dynamicRealmObject.set(mActiveTable.getColumns().get(position.x).getName(), s);
             }
         });
+    }
 
+    public void deleteRow(final Position position) {
+        mRealm.executeTransaction(new DynamicRealm.Transaction() {
+            @Override
+            public void execute(DynamicRealm realm) {
+                DynamicRealmObject object = realm.where(mActiveTable.getName()).findAll().get(position.y);
+                object.deleteFromRealm();
+            }
+        });
     }
 }

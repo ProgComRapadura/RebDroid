@@ -13,6 +13,7 @@ import android.view.View;
 import com.github.snakeice.realmdroid.R;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class CustomTableView extends View {
@@ -30,6 +31,7 @@ public class CustomTableView extends View {
     private int mItemWidth;
     private int mItemMargin;
     private ArrayList<ArrayList<String>> datas;
+    private Date clickTime;
 
     private int row = 20;
     private int column = 10;
@@ -180,11 +182,15 @@ public class CustomTableView extends View {
         }
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-
+                clickTime = new Date();
                 break;
             case MotionEvent.ACTION_UP:
                 if (mPositionChangeListener != null) {
-                    mPositionChangeListener.onPositionClick(position);
+                    long newTime = new Date().getTime();
+                    if (newTime - clickTime.getTime() <= 1000)
+                        mPositionChangeListener.onPositionClick(position);
+                    else
+                        mPositionChangeListener.onLongPositionClick(position);
                 }
                 break;
             default:
@@ -277,5 +283,7 @@ public class CustomTableView extends View {
 
     public interface OnPositionClickListener {
         void onPositionClick(Position position);
+
+        void onLongPositionClick(Position position);
     }
 }

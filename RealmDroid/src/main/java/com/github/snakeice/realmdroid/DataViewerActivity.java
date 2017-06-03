@@ -1,6 +1,7 @@
 package com.github.snakeice.realmdroid;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import com.github.snakeice.realmdroid.scrolltable.ScrollTableView;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.DynamicRealmObject;
+import io.realm.ObjectChangeSet;
 import io.realm.RealmList;
 
 public class DataViewerActivity extends Activity implements ScrollTableView.ScrollTableListener {
@@ -56,6 +58,9 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
         }
     }
 
+
+
+
     @Override
     public void onItemClickListener(final Position position) {
         final Object value = mDBController.getValue(position);
@@ -72,9 +77,31 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
                         public void onClick(DialogInterface dialog, int which, Editable text) {
                             mDBController.alterValue(position, text.toString());
                             va.generateData();
-                            va.createView();
+                            va.refreshView();
                         }
                     }).buildAndShow();
+        }
+    }
+
+    @Override
+    public void onLongItemClickListener(final Position position) {
+        final Object value = mDBController.getValue(position);
+        if (!value.getClass().equals(RealmList.class)){
+         new AlertDialog.Builder(this)
+                 .setTitle("Confirm")
+                 .setMessage("Delete row?")
+                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                     @Override
+                     public void onClick(DialogInterface dialog, int which) {
+                         mDBController.deleteRow(position);
+                         va.refreshView();
+                     }
+                 }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+             @Override
+             public void onClick(DialogInterface dialog, int which) {
+                 dialog.dismiss();
+             }
+         }).show();
         }
     }
 }

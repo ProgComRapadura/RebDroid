@@ -5,13 +5,11 @@
     <!--android:icon="@mipmap/ic_launcher"-->
 
     <application
-        android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:icon="@drawable/error_center_x"
         android:fullBackupContent="false"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,RtlEnabled">
         <activity android:name="com.github.snakeice.realmdroidteste.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

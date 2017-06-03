@@ -43,8 +43,12 @@ public class ViewAdapter {
     }
 
     public ScrollTableView createView() {
-        mView.setDatas(titles, leftTitle, content);
+        setData();
         return mView;
+    }
+
+    private void setData() {
+        mView.setDatas(titles, leftTitle, content);
     }
 
     private ArrayList<String> createTitles() {
@@ -92,5 +96,14 @@ public class ViewAdapter {
 
     public boolean isNotEmpty() {
         return (!mItens.isEmpty());
+    }
+
+    public ScrollTableView getView() {
+        return mView;
+    }
+
+    public void refreshView() {
+        generateData();
+        setData();
     }
 }

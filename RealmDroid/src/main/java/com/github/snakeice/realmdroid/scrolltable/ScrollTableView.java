@@ -116,12 +116,19 @@ public class ScrollTableView extends LinearLayout implements CustomTableView.OnP
         }
     }
 
+    @Override
+    public void onLongPositionClick(Position position) {
+        if(mListener != null) mListener.onLongItemClickListener(position);
+    }
+
     public void setListener(ScrollTableListener mListener) {
         this.mListener = mListener;
     }
 
     public interface ScrollTableListener {
         void onItemClickListener(Position position);
+
+        void onLongItemClickListener(Position position);
     }
 
 }
