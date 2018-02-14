@@ -55,11 +55,11 @@ public class ScrollTableView extends LinearLayout implements CustomTableView.OnP
     }
 
     private void setUpView() {
-        IHorizontalScrollView scrollHeaderHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_header_horizontal);
-        IHorizontalScrollView scrollHorizontal = (IHorizontalScrollView) findViewById(R.id.scroll_horizontal);
-        headerVertical = (LeftTitleView) findViewById(R.id.header_vertical);
-        headerHorizontal = (TopTitleView) findViewById(R.id.header_horizontal);
-        contentView = (CustomTableView) findViewById(R.id.content_view);
+        IHorizontalScrollView scrollHeaderHorizontal = findViewById(R.id.scroll_header_horizontal);
+        IHorizontalScrollView scrollHorizontal = findViewById(R.id.scroll_horizontal);
+        headerVertical = findViewById(R.id.header_vertical);
+        headerHorizontal = findViewById(R.id.header_horizontal);
+        contentView = findViewById(R.id.content_view);
         scrollHorizontal.setIScroller(scrollHeaderHorizontal);
         scrollHeaderHorizontal.setIScroller(scrollHorizontal);
     }

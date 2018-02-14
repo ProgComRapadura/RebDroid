@@ -42,7 +42,7 @@ public class DataViewerActivity extends Activity implements ScrollTableView.Scro
         Bundle bundle = getIntent().getExtras();
         mDBController = new DBMetadataCollector();
         mDBController.setActiveTable(bundle.getInt(DBViewer.TABLE_NUM, 0));
-        ScrollTableView scrollTableView = (ScrollTableView) findViewById(R.id.scroll_table_view);
+        ScrollTableView scrollTableView = findViewById(R.id.scroll_table_view);
         scrollTableView.setListener(this);
         va = new ViewAdapter(mDBController.getActiveTable(), scrollTableView);
         if (va.isNotEmpty()) {

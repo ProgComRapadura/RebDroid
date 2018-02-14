@@ -16,7 +16,7 @@ public class TablesView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tables_view);
-        ListView lv = (ListView) findViewById(R.id.lv_tables);
+        ListView lv = findViewById(R.id.lv_tables);
         DBMetadataCollector db = new DBMetadataCollector();
         assert lv != null;
         lv.setAdapter(new ArrayAdapter<>(this, R.layout.list_table_item_text, db.getTablesName()));
