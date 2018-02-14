@@ -26,7 +26,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    compile 'com.github.ProgComRapadura:RebDroid:2.0'
+	    compile 'com.github.ProgComRapadura:RebDroid:4.0'
 	}
 ```
 ### How to use
